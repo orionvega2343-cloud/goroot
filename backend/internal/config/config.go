@@ -13,6 +13,7 @@ type DB struct {
 	Port     string `yaml:"port"`
 	User     string `yaml:"user"`
 	Password string `env:"password" required:"true"`
+	SslMode  string `yaml:"ssl_mode" required:"true"`
 }
 
 type Config struct {
