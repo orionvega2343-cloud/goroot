@@ -1,12 +1,22 @@
 :root {
+  /* брендовые цвета — не зависят от темы */
   --purple: #9381ff;
   --periwinkle: #b8b8ff;
-  --ghost: #f8f7ff;
-  --antique: #ffeedd;
   --peach: #ffd8be;
-  --ink: #221c40;
-  --ink-soft: #5b5480;
+  --ink-fixed: #221c40;
+
+  /* поверхности и текст — переключаются темой */
+  --bg: #f8f7ff;
+  --bg-translucent: rgba(248, 247, 255, 0.85);
+  --surface: #fff;
+  --surface-alt: #ffeedd;
+  --text: #221c40;
+  --text-soft: #5b5480;
   --line: rgba(34, 28, 64, 0.12);
+
+  /* хедер/футер/терминал в светлой теме — как было до смены темы */
+  --footer-bg: var(--ink-fixed);
+  --terminal-bg: var(--ink-fixed);
 
   --radius: 18px;
   --maxw: 1180px;
@@ -14,4 +24,30 @@
   --font-display: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --font-body: 'Manrope', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #14111f;
+    --bg-translucent: rgba(20, 17, 31, 0.85);
+    --surface: #1e1a2e;
+    --surface-alt: #2a2140;
+    --text: #ece9fb;
+    --text-soft: #a89fd6;
+    --line: rgba(236, 233, 251, 0.14);
+    --footer-bg: #100d1e;
+    --terminal-bg: #0a0814;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #14111f;
+  --bg-translucent: rgba(20, 17, 31, 0.85);
+  --surface: #1e1a2e;
+  --surface-alt: #2a2140;
+  --text: #ece9fb;
+  --text-soft: #a89fd6;
+  --line: rgba(236, 233, 251, 0.14);
+  --footer-bg: #100d1e;
+  --terminal-bg: #0a0814;
 }

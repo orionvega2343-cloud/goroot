@@ -1,5 +1,5 @@
 .card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 36px;
@@ -13,14 +13,8 @@
   width: 84px;
   height: 84px;
   border-radius: 16px;
+  object-fit: cover;
   background: linear-gradient(145deg, var(--purple), var(--periwinkle));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-weight: 700;
-  color: #fff;
-  font-size: 1.4rem;
   flex-shrink: 0;
 }
 
@@ -30,7 +24,7 @@
 }
 
 .bio {
-  color: var(--ink-soft);
+  color: var(--text-soft);
   line-height: 1.7;
 }
 
@@ -44,10 +38,17 @@
 .meta span {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--ink-soft);
+  color: var(--text-soft);
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.metaIcon {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  opacity: 0.75;
 }
 
 @media (max-width: 880px) {

@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <span>© 2026 Артём Соколов</span>
+          <span>© 2026 Все права защищены</span>
           <span>Москва · Go developer</span>
         </div>
       </div>

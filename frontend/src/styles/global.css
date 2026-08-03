@@ -12,9 +12,10 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--ink);
-  background: var(--ghost);
+  color: var(--text);
+  background: var(--bg);
   overflow-x: hidden;
+  transition: background 0.3s, color 0.3s;
 }
 
 h1,
@@ -89,7 +90,7 @@ svg {
   padding: 90px 0;
 }
 .section.alt {
-  background: var(--antique);
+  background: var(--surface-alt);
 }
 .section-head {
   margin-bottom: 46px;
@@ -107,7 +108,7 @@ svg {
   letter-spacing: -0.02em;
 }
 .section-head p {
-  color: var(--ink-soft);
+  color: var(--text-soft);
   margin-top: 12px;
   line-height: 1.6;
 }
@@ -140,7 +141,7 @@ svg {
 .btn-ghost {
   background: transparent;
   border-color: var(--line);
-  color: var(--ink);
+  color: var(--text);
 }
 .btn-ghost:hover {
   border-color: var(--purple);

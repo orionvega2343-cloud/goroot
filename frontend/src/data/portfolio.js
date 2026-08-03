@@ -93,37 +93,51 @@ export const projects = [
     repo: null,
   },
   {
-    tag: 'В РАЗРАБОТКЕ',
+    tag: 'AI-БРОКЕР МИКРОСЕРВИС',
     title: 'AiGateway',
     subtitle: 'Брокер-микросервис для AI-обогащения событий',
     stackLine: 'Go, Gin, gRPC, PostgreSQL, Redis, Docker',
     details: [
-      'Проектирую брокер: Producer отправляет события по REST, сервис обогащает их через AI API, Consumer получает результат по gRPC — стороны не знают друг о друге',
+      'Спроектировал брокер: Producer отправляет события по REST, сервис обогащает их через AI API, Consumer получает результат по gRPC — стороны не знают друг о друге',
       'Транспортные слои REST и gRPC — тонкие адаптеры над общим ядром internal/',
-      'Переиспользую паттерны: Redis-дедупликация, fan-in / fan-out pipeline, graceful shutdown',
+      'Переиспользовал паттерны: Redis-дедупликация, fan-in / fan-out pipeline, graceful shutdown',
     ],
     repo: null,
-    inProgress: true,
+  },
+  {
+    tag: 'TELEGRAM-БОТ + VPN + ОПЛАТА',
+    title: 'NorthlaneVPN',
+    subtitle: 'Telegram-бот для продажи VPN-подписок',
+    stackLine: 'Go, PostgreSQL, sqlx, Redis, telebot.v3, Xray-core (VLESS + Reality), Docker',
+    details: [
+      'Слоистая архитектура Repository → Service → Handler с доменными сущностями User, Subscription, Tariff, Payment, Server, Referral',
+      'Генерирую subscription-ссылки VLESS + Reality через Xray-core, совместимые с Happ / v2rayNG / NekoBox',
+      'Асинхронный поллинг статуса платежей фоновыми горутинами (time.Ticker + context.WithTimeout), без блокировки основного потока',
+      'TCP health-check серверов через net.DialTimeout при добавлении в пул; рассылка уведомлений об истекающих подписках с изоляцией ошибок по получателям',
+      'Реферальная система защищена от повторного начисления бонусов unique-constraint и проверкой на уровне сервиса',
+    ],
+    repo: null,
   },
 ]
 
 export const orderPlans = [
   {
     title: 'REST API',
-    price: 'от ___ ₽',
+    price: 'от 15 000 ₽',
     features: ['Эндпоинты под вашу логику', 'Слоистая архитектура', 'Базовые тесты'],
     featured: false,
+    ribbon: 'выгодная цена',
   },
   {
     title: 'Полный бэкенд',
-    price: 'от ___ ₽',
+    price: 'от 45 000 ₽',
     features: ['API + БД + миграции', 'JWT-авторизация', 'Docker для деплоя', 'Unit-тесты'],
     featured: true,
     ribbon: 'популярно',
   },
   {
     title: 'Telegram-бот под ключ',
-    price: 'от ___ ₽',
+    price: 'от 30 000 ₽',
     features: ['Бот + собственный backend', 'Интеграция с вашим API или AI', 'Контейнеризация'],
     featured: false,
   },
