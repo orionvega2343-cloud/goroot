@@ -1,0 +1,21 @@
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Editors / IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Env ---
+.env
+.env.local
+.env.*.local
+
+# NOTE: frontend/ and backend/ keep their own .gitignore for
+# stack-specific artefacts (node_modules, build output, Go binaries, etc.)

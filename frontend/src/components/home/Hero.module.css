@@ -1,0 +1,139 @@
+.hero {
+  padding: 90px 0 70px;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 54px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--purple);
+  background: rgba(147, 129, 255, 0.1);
+  border: 1px solid rgba(147, 129, 255, 0.25);
+  padding: 6px 12px;
+  border-radius: 30px;
+  margin-bottom: 22px;
+}
+
+.ping {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--purple);
+  animation: ping 1.6s ease-in-out infinite;
+}
+
+@keyframes ping {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(147, 129, 255, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(147, 129, 255, 0);
+  }
+}
+
+.title {
+  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.title span {
+  color: var(--purple);
+}
+
+.lead {
+  margin-top: 20px;
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+/* terminal card */
+.terminal {
+  background: var(--ink);
+  color: #e9e6ff;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px rgba(34, 28, 64, 0.25);
+  overflow: hidden;
+  transform: rotate(1.2deg);
+  transition: transform 0.4s;
+}
+
+.terminal:hover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+.termBar {
+  display: flex;
+  gap: 7px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.termBar i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: block;
+}
+.termBar i:nth-child(1) {
+  background: #ff8c82;
+}
+.termBar i:nth-child(2) {
+  background: var(--peach);
+}
+.termBar i:nth-child(3) {
+  background: #8cf0b5;
+}
+
+.termBody {
+  padding: 22px 22px 28px;
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  line-height: 1.85;
+}
+
+.cmd {
+  color: var(--periwinkle);
+}
+.out {
+  color: #c9c4f2;
+}
+.key {
+  color: var(--peach);
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background: var(--periwinkle);
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

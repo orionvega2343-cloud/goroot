@@ -1,0 +1,17 @@
+:root {
+  --purple: #9381ff;
+  --periwinkle: #b8b8ff;
+  --ghost: #f8f7ff;
+  --antique: #ffeedd;
+  --peach: #ffd8be;
+  --ink: #221c40;
+  --ink-soft: #5b5480;
+  --line: rgba(34, 28, 64, 0.12);
+
+  --radius: 18px;
+  --maxw: 1180px;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'Manrope', sans-serif;
+}

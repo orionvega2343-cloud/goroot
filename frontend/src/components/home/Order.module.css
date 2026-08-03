@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px rgba(34, 28, 64, 0.14);
+}
+
+.featured {
+  border-color: var(--purple);
+  background: linear-gradient(180deg, #fff, var(--ghost));
+}
+
+.ribbon {
+  position: absolute;
+  top: 16px;
+  right: -30px;
+  transform: rotate(35deg);
+  background: var(--purple);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 4px 36px;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+}
+
+.price {
+  font-family: var(--font-mono);
+  color: var(--purple);
+  font-size: 1rem;
+}
+
+.features {
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.features li::before {
+  content: '✓ ';
+  color: var(--purple);
+  font-weight: 700;
+}

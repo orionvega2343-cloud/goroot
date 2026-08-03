@@ -1,0 +1,25 @@
+# --- Go binaries / build ---
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+goroot-api
+api
+
+# --- Test / coverage ---
+*.test
+*.out
+coverage.*
+
+# --- Go workspace ---
+go.work
+go.work.sum
+
+# --- Env / secrets ---
+.env
+*.local
+
+# --- Vendored deps (using modules) ---
+/vendor/

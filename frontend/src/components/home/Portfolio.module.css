@@ -1,0 +1,118 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+.flipCard {
+  perspective: 1400px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.flipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.flipCard.flipped .flipInner {
+  transform: rotateY(180deg);
+}
+
+.flipFace {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 18px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flipFront {
+  background: linear-gradient(155deg, var(--purple), #7765f0);
+  color: #fff;
+  justify-content: space-between;
+  box-shadow: 0 18px 36px rgba(147, 129, 255, 0.3);
+}
+
+.projTag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.flipFront h3 {
+  font-size: 1.45rem;
+  margin-top: auto;
+  letter-spacing: -0.01em;
+}
+
+.projSubtitle {
+  font-size: 0.86rem;
+  opacity: 0.85;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.hint {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  opacity: 0.75;
+  margin-top: 10px;
+}
+
+.flipBack {
+  background: #fff;
+  border: 1px solid var(--line);
+  transform: rotateY(180deg);
+  box-shadow: 0 18px 36px rgba(34, 28, 64, 0.12);
+}
+
+.flipBack h4 {
+  font-size: 1.05rem;
+  margin-bottom: 2px;
+}
+
+.stackLine {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--purple);
+  margin-bottom: 12px;
+}
+
+.flipBack ul {
+  list-style: none;
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  flex: 1;
+  overflow: auto;
+}
+
+.flipBack ul li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+}
+
+.flipBack ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.repoLink {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--purple);
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
