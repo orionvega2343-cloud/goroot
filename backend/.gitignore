@@ -23,3 +23,5 @@ go.work.sum
 
 # --- Vendored deps (using modules) ---
 /vendor/
+
+config/config.yml
