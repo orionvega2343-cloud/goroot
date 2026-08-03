@@ -41,9 +41,17 @@ func main() {
 	//Роутер
 	r := gin.New()
 
-	// CORS: фронтенд (localhost:5173) и бэкенд (localhost:8080) — разные origin для браузера
+	// CORS: нужен только если бэкенд дёргают напрямую, минуя прокси (nginx/vite),
+	// на разных origin — сайт на прод-домене и локальная разработка.
+	allowedOrigins := map[string]bool{
+		"http://localhost:5173": true,
+		"http://83.217.193.127": true,
+	}
 	r.Use(func(c *gin.Context) {
-		c.Header("Access-Control-Allow-Origin", "http://83.217.193.127")
+		origin := c.Request.Header.Get("Origin")
+		if allowedOrigins[origin] {
+			c.Header("Access-Control-Allow-Origin", origin)
+		}
 		c.Header("Access-Control-Allow-Methods", "POST, OPTIONS")
 		c.Header("Access-Control-Allow-Headers", "Content-Type")
 		if c.Request.Method == "OPTIONS" {
