@@ -5,7 +5,7 @@
 }
 
 .card {
-  background: #fff;
+   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 30px;
@@ -24,7 +24,7 @@
 
 .featured {
   border-color: var(--purple);
-  background: linear-gradient(180deg, #fff, var(--ghost));
+  background: linear-gradient(180deg, var(--surface), var(--bg));
 }
 
 .ribbon {
@@ -52,7 +52,7 @@
 .features {
   list-style: none;
   font-size: 0.85rem;
-  color: var(--ink-soft);
+  color: var(--text-soft);
   line-height: 1.7;
 }
 

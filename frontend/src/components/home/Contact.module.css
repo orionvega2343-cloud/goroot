@@ -11,7 +11,7 @@
 }
 
 .item {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 18px 20px;
@@ -47,7 +47,7 @@
 }
 
 .form {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 32px;
@@ -65,7 +65,7 @@
 .field label {
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  color: var(--ink-soft);
+  color: var(--text-soft);
 }
 
 .field input,
@@ -75,16 +75,16 @@
   padding: 12px 14px;
   font-family: var(--font-body);
   font-size: 0.92rem;
-  background: var(--ghost);
+  background: var(--bg);
   transition: 0.2s;
-  color: var(--ink);
+  color: var(--text);
 }
 
 .field input:focus,
 .field textarea:focus {
   outline: none;
   border-color: var(--purple);
-  background: #fff;
+  background: var(--surface);
   box-shadow: 0 0 0 4px rgba(147, 129, 255, 0.14);
 }
 

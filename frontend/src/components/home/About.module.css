@@ -1,5 +1,5 @@
 .card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 36px;
@@ -24,7 +24,7 @@
 }
 
 .bio {
-  color: var(--ink-soft);
+  color: var(--text-soft);
   line-height: 1.7;
 }
 
@@ -38,7 +38,7 @@
 .meta span {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--ink-soft);
+  color: var(--text-soft);
   display: flex;
   align-items: center;
   gap: 6px;
