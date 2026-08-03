@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS form(
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    contact TEXT NOT NULL,
+    text TEXT NOT NULL
+)
