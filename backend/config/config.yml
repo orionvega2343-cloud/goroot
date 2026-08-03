@@ -1,0 +1,6 @@
+db:
+  name: sendform
+  host: localhost
+  port: 5432
+  user: postgres
+  ssl_mode: disable
