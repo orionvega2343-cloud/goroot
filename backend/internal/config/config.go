@@ -12,12 +12,12 @@ type DB struct {
 	Host     string `yaml:"host"`
 	Port     string `yaml:"port"`
 	User     string `yaml:"user"`
-	Password string `env:"password" required:"true"`
-	SslMode  string `yaml:"ssl_mode" required:"true"`
+	Password string `env:"DB_PASS" env-required:"true"`
+	SslMode  string `yaml:"ssl_mode" env-required:"true"`
 }
 
 type Config struct {
-	DB *DB `yaml:"db"`
+	DB DB `yaml:"db"`
 }
 
 func MustLoad() *Config {
