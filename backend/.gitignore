@@ -25,3 +25,5 @@ go.work.sum
 /vendor/
 
 config/config.yml
+
+app
