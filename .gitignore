@@ -13,7 +13,7 @@ Thumbs.db
 logs/
 
 # --- Env ---
-.env
+backend/.env
 .env.local
 .env.*.local
 
