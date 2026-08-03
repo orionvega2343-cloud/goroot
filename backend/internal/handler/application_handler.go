@@ -29,7 +29,8 @@ func (ah *ApplicationHandlerImpl) PostApplication(c *gin.Context) {
 		return
 	}
 
-	application, err := ah.svc.CreateApplication(a)
+	ctx := c.Request.Context()
+	application, err := ah.svc.CreateApplication(ctx, a)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
